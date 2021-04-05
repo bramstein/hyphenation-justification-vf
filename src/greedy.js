@@ -3,8 +3,8 @@ function greedy(text, measureText, alignment, measure, hyphenation) {
     text = text.replace(/\|/g, '');
   }
 
-	let hyphenWidth = measureText('-');
-	let spaceWidth = measureText('\u00A0');
+  let hyphenWidth = measureText('-');
+  let spaceWidth = measureText('\u00A0');
 
   let nodes = text.split(/(\s|\|)/).map(function (fragment) {
     if (fragment === ' ') {
@@ -58,8 +58,6 @@ function greedy(text, measureText, alignment, measure, hyphenation) {
   }
 
   breaks.push({ position: nodes.length, ratio: 1 });
-
-
 
   return { nodes, breaks };
 }
