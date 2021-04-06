@@ -6,17 +6,17 @@
     <script src="src/linebreak.js"></script>
     <script src="src/knuth-and-plass.js"></script>
     <script src="src/greedy.js"></script>
-		<style>
-		@font-face {
-			font-family: Gimlet;
-			src: url(gimlet-vf.ttf);
-		}
+    <style>
+    @font-face {
+      font-family: Gimlet;
+      src: url(gimlet-vf.ttf);
+    }
 
-		html {
-			font-family: Gimlet, monospace;
+    html {
+      font-family: Gimlet, monospace;
       font-size: 20px;
       font-variation-settings: 'wdth' 97, 'wght' 400;
-		}
+    }
 
     body {
       margin: 0;
@@ -189,7 +189,7 @@
       width: 100%;
       z-index: -100;
     }
-		</style>
+    </style>
   </head>
   <body>
     <ul class="toolbar">
@@ -234,19 +234,19 @@
     <div id="info"></div>
   <script>
 
-		window.onload = function () {
-			let text = "In olden times when wish|ing still helped one, there lived a king whose daugh|ters were all beau|ti|ful; and the youngest was so beau|ti|ful that the sun it|self, which has seen so much, was as|ton|ished when|ever it shone in her face. Close by the king’s cas|tle lay a great dark for|est, and un|der an old lime-tree in the for|est was a well, and when the day was very warm, the king’s child went out to the for|est and sat down by the foun|tain; and when she was bored she took a golden ball, and threw it up on high and caught it; and this ball was her fa|vorite play|thing.";
+    window.onload = function () {
+      let text = "In olden times when wish|ing still helped one, there lived a king whose daugh|ters were all beau|ti|ful; and the youngest was so beau|ti|ful that the sun it|self, which has seen so much, was as|ton|ished when|ever it shone in her face. Close by the king’s cas|tle lay a great dark for|est, and un|der an old lime-tree in the for|est was a well, and when the day was very warm, the king’s child went out to the for|est and sat down by the foun|tain; and when she was bored she took a golden ball, and threw it up on high and caught it; and this ball was her fa|vorite play|thing.";
 
       let ruler = document.getElementById('ruler');
       let sample = document.getElementById('sample');
 
-			function measureText(str) {
+      function measureText(str) {
         if (str === ' ') {
           str = '\u00A0';
         }
         ruler.textContent = str;
         return ruler.getClientRects()[0].width;
-			}
+      }
 
       function getAlignment() {
         let options = document.getElementsByName('alignment');
